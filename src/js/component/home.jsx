@@ -71,7 +71,6 @@ const Home = () => {
             value={inputValue}
             onKeyPress={(e) => {
               if (e.key === "Enter" && inputValue.trim() !== "") {
-                setTodos(todos.concat(inputValue));
                 setInputValue("");
                 const newData = [...todos, { label: inputValue, done: false }];
                 updateData(newData);
